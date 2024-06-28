@@ -1,13 +1,128 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import image from '../../public/avatar.png';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-
-	</main>
+	<div class="pages home" >
+        {/*<ParticlesBackground number={64}/>*/}
+        <div class="container">
+          <div class="container-descriptions">
+            <div class="container-descriptions-header">
+            <span>
+              <h1>F</h1>
+              <h1>u</h1>
+              <h1>l</h1>
+              <h1>l</h1>
+              <span> </span>
+              <h1>S</h1>
+              <h1>t</h1>
+              <h1>a</h1>
+              <h1>c</h1>
+              <h1>k</h1>
+              <h1>D</h1>
+              <h1>e</h1>
+              <h1>v</h1>
+              <h1>e</h1>
+              <h1>l</h1>
+              <h1>o</h1>
+              <h1>p</h1>
+              <h1>e</h1>
+              <h1>r</h1>
+              <h1>a</h1>
+              <h1>n</h1>
+              <h1>d</h1>
+              <h1>M</h1>
+              <h1>o</h1>
+              <h1>b</h1>
+              <h1>i</h1>
+              <h1>l</h1>
+              <h1>e</h1>
+              <h1>D</h1>
+              <h1>e</h1>
+              <h1>v</h1>
+              <h1>e</h1>
+              <h1>l</h1>
+              <h1>o</h1>
+              <h1>p</h1>
+              <h1>e</h1>
+              <h1>r</h1>
+            </span>
+              <br>
+              <h2>Oh Hi!!, I´m</h2>
+              <h1>
+                <strong>Facundo Nahuel<br></strong>
+                <strong>Gerez</strong>
+              </h1>
+            </div>
+            <h2>I am a computer engineering student and junior developer in the field of full stack development, mobile
+              application development and API development.</h2>
+          </div>
+          <img class="image" src='../../public/avatar.png' alt="My image where im smiling">
+        </div>
+      </div>
 </Layout>
 
 <style>
+	.home{
+		position: relative;
+		display: flex;
+		width: 100%;
+		height: 100vh;
+		background: rgb(53,0,90);
+		background: linear-gradient(45deg, rgba(53,0,90,1) 0%, rgba(0,0,0,1) 25%, rgba(21,0,36,1) 75%, rgba(53,0,90,1) 100%);
+	}
+	.container{
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+	.image{
+		object-fit: contain;
+		width: 30rem;
+		height: 40rem;
+	}
+	.container-descriptions{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		max-width: 50%;
+		max-height: calc(100% - 8vh);
+		padding: 40px;
+		border-radius: 40px;
+		text-wrap: balance;
+	}
+	.container-descriptions h1{
+		display: inline-block;
+	}
+	.container-descriptions span h1{
+		color: lightblue;
+		font-size: 45px;
+    margin: 0%;
+	}
+	.container-descriptions h2{
+		color: white;
+	}
+	span h1:hover{
+		color: rgba(85,0,255,1);;
+		animation: rubberBand 0.5s;
+		transition: color 1.25s;
+	}
 
+	.container-descriptions h1 strong{
+		color: rgba(117,0,197,1);
+		font-size: 60px;
+	}
+	@keyframes rubberBand {
+		0% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.25);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
 </style>
