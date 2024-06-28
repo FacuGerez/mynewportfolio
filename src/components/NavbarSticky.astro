@@ -1,0 +1,51 @@
+---
+import Buttonnav from "./Buttonaside.astro";
+---
+
+<nav>
+    <ul>
+        <li>
+            <Buttonnav src="" alt="Home" href="/"/>
+        </li>
+        <li>
+            <Buttonnav src="" alt="About" href="/#"/>
+        </li>
+        <li>
+            <Buttonnav src="" alt="Proyects" href="/#"/>
+        </li>
+        <li>
+            <Buttonnav src="" alt="Experience" href="/#"/>
+        </li>
+        <li>
+            <Buttonnav src="" alt="Contact" href="/#"/>
+        </li>
+    </ul>
+</nav>
+<style>
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: initial;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(99px);
+	}
+    ul{
+        height: 64px;
+        max-width: min-content;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid white;
+        border-radius: 20rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        backdrop-filter: blur(12px);
+    }
+    li{
+        list-style: none;
+    }
+</style>
