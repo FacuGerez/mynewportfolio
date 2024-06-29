@@ -2,25 +2,24 @@
 import NavbarSticky from '../components/NavbarSticky.astro';
 interface Props {
 	title: string;
+	description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
-		<main>
-
-		</main>
+		<slot />
 		<NavbarSticky/>
 	</body>
 </html>
@@ -30,16 +29,23 @@ const { title } = Astro.props;
 		padding: 0;
 		box-sizing: border-box;
 	}
+	:root {
+		color-scheme: light;
+		--background-dark: rgb(12, 0, 20);
+		--background-light: rgb(252, 235, 253);
+		--color-text-dark: white;
+		--color-text-light: black;
+		--font-aplicacion: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto ;
+		--navbar-height: 100px;
+	}
 </style>
 <style>
 	body{
-		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-		background-color: linear-gradient(45deg, rgba(53,0,90,1) 0%, rgba(0,0,0,1) 20%, rgba(21,0,36,1) 80%, rgba(53,0,90,1) 100%);
-		background-color: rgb(15, 0, 17);
+		position: relative;
+		font-family: var(--font-aplicacion), sans-serif;
+		background-color: light-dark(var(--background-light), var(--background-dark));
 		background-image: url("violetdarknest.svg");
+		color: light-dark(var(--color-text-light), var(--color-text-dark));
 		background-position-x: 60%;
-	}
-	main{
-		min-height: calc(100vh - 100px);
 	}
 </style>

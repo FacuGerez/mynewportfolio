@@ -1,26 +1,28 @@
 ---
-import Buttonnav from "./Buttonaside.astro";
+import Buttonnav from "./Buttonnav.astro";
 ---
 
 <nav>
     <ul>
         <Buttonnav src="hogar.png" alt="Home" href="/"/>
-        <Buttonnav src="" alt="About" href="/#"/>
-        <Buttonnav src="" alt="Proyects" href="/#"/>
-        <Buttonnav src="" alt="Experience" href="/#"/>
-        <Buttonnav src="" alt="Contact" href="/#"/>
+        <Buttonnav src="hogar.png" alt="About" href="/#"/>
+        <Buttonnav src="hogar.png" alt="Proyects" href="/#"/>
+        <Buttonnav src="hogar.png" alt="Experience" href="/#"/>
+        <Buttonnav src="hogar.png" alt="Contact" href="/#"/>
     </ul>
 </nav>
 <style>
     nav{
+        position: sticky;
         display: flex;
         justify-content: center;
         align-items: initial;
         bottom: 0;
         width: 100%;
         height: 100px;
-        -webkit-backdrop-filter: blur(20px);
+        background-color: rgba(0,0,0,0.1);
         backdrop-filter: blur(99px);
+        z-index: 1000;
 	}
     ul{
         height: 80%;
