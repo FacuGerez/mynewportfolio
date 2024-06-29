@@ -4,21 +4,11 @@ import Buttonnav from "./Buttonaside.astro";
 
 <nav>
     <ul>
-        <li>
-            <Buttonnav src="" alt="Home" href="/"/>
-        </li>
-        <li>
-            <Buttonnav src="" alt="About" href="/#"/>
-        </li>
-        <li>
-            <Buttonnav src="" alt="Proyects" href="/#"/>
-        </li>
-        <li>
-            <Buttonnav src="" alt="Experience" href="/#"/>
-        </li>
-        <li>
-            <Buttonnav src="" alt="Contact" href="/#"/>
-        </li>
+        <Buttonnav src="hogar.png" alt="Home" href="/"/>
+        <Buttonnav src="" alt="About" href="/#"/>
+        <Buttonnav src="" alt="Proyects" href="/#"/>
+        <Buttonnav src="" alt="Experience" href="/#"/>
+        <Buttonnav src="" alt="Contact" href="/#"/>
     </ul>
 </nav>
 <style>
@@ -33,9 +23,8 @@ import Buttonnav from "./Buttonaside.astro";
         backdrop-filter: blur(99px);
 	}
     ul{
-        height: 64px;
+        height: 80%;
         max-width: min-content;
-        background-color: rgba(255, 255, 255, 0.1);
         border: 1px solid white;
         border-radius: 20rem;
         display: flex;
@@ -44,8 +33,6 @@ import Buttonnav from "./Buttonaside.astro";
         align-items: center;
         gap: 4px;
         backdrop-filter: blur(12px);
-    }
-    li{
-        list-style: none;
+        padding: 5px;
     }
 </style>

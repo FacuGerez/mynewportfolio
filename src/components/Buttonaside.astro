@@ -15,21 +15,18 @@ const { src, alt, href } = Astro.props;
 <style>
     a {
         background-color: rgba(0, 0, 0, 0.288);
-        border-radius: 6px;
-        color: white;
-        text-decoration: none;
+        border: 1px solid white;
+        border-radius: 100%;
         max-width: 100%;
-        max-height: auto;
+        max-height: 90%;
         display: flex;
-        gap: 4px;
         justify-content: initial;
         align-items: center;
-        margin: 5px;
-        padding: 5px;
+        margin: 10px;
+        padding: 10px;
     }
     img {
-        max-width: auto;
-        max-height: auto;
-        margin: 0 0 0 10px;
+        max-width: 40px;
+        aspect-ratio: 1/1;
     }
 </style>
