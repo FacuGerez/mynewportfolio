@@ -4,7 +4,7 @@ import GridBento from '../components/GridBento.astro';
 ---
 
 <Layout title="Portfolio Facundo Gerez" description=''>
-	<main class="home">
+	<div class="home">
 		<div class="home__content">
 			<img class="home__logo" src="hogar.png" alt="logo de Facu" />
 			<h1 class="home__title"><b>Facundo Gerez</b></h1>
@@ -12,15 +12,14 @@ import GridBento from '../components/GridBento.astro';
 				lightning-fast performance with a modern developer experience.</p>
 		</div>
 		<GridBento />
-	</main>
+	</div>
 </Layout>
 
 <style>
-	.home{
+	.home {
+		max-width: 100%;
 		display: grid;
-		min-height: 100vh;
 		grid-template-rows: auto 1fr;
-		padding: 10vh 20vw 5vh 20vw;
 		gap: 6rem;
 	}
 	.home__content {

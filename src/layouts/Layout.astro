@@ -19,7 +19,9 @@ const { title, description } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<main>
+			<slot />
+		</main>
 		<NavbarSticky/>
 	</body>
 </html>
@@ -48,5 +50,10 @@ const { title, description } = Astro.props;
 		background-image: url("violetdarknest.svg");
 		color: var(--color-text);
 		background-position-x: 60%;
+	}
+	main {
+		position: relative;
+		min-height: calc(100vh - var(--navbar-height));
+		padding: 10vh 20vw 5vh 20vw;
 	}
 </style>

@@ -1,10 +1,10 @@
 ---
 import Buttonnav from './Buttonnav.astro'
 import Hogar from '../icons/Hogar.astro'
-import BurbujaDeDialogo from '../icons/BurbujaDeDialogo.astro'
-import Maleta from '../icons/Maleta.astro'
-import Programacion from '../icons/Programacion.astro'
-import Usuario from '../icons/Usuario.astro'
+import AboutMe from '../icons/Usuario.astro'
+import Proyects from '../icons/Programacion.astro'
+import Experience from '../icons/Maleta.astro'
+import Contact from '../icons/BurbujaDeDialogo.astro'
 import Theme from '../icons/Theme.astro'
 ---
 <nav>
@@ -12,17 +12,17 @@ import Theme from '../icons/Theme.astro'
         <Buttonnav href="/">
           <Hogar class="icon"/>
         </Buttonnav>
-        <Buttonnav  href="/#">
-          <BurbujaDeDialogo class="icon"/>
+        <Buttonnav  href="/about">
+          <AboutMe class="icon"/>
         </Buttonnav>
-        <Buttonnav  href="/#">
-          <Maleta class="icon"/>
+        <Buttonnav  href="/proyects">
+          <Proyects class="icon"/>
         </Buttonnav>
-        <Buttonnav  href="/#">
-          <Programacion class="icon"/>
+        <Buttonnav  href="/experience">
+          <Experience class="icon"/>
         </Buttonnav>
-        <Buttonnav  href="/#">
-          <Usuario class="icon"/>
+        <Buttonnav  href="/contact">
+          <Contact class="icon"/>
         </Buttonnav>
         <Theme/>
     </ul>

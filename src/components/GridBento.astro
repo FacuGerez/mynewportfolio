@@ -1,17 +1,22 @@
 ---
 import Bentoindiv from "./Bentoindiv.astro";
-const elements = [{title : "Proyectos", gridarea: "bento1"}
-                , {title : "Experiencia", gridarea: "bento2"},
-                {title : "About me", gridarea: "bento3"},
-                {title : "Contactame", gridarea: "bento4"}];
-
 ---
 
-
-
 <div class="home__bento">
-    {elements.map(({title,gridarea}) =>(<Bentoindiv title={title} gridarea={gridarea}/>))}
+	<Bentoindiv title="Proyectos" gridarea="bento1">
+
+	</Bentoindiv>
+	<Bentoindiv title="Experiencia" gridarea="bento2">
+
+	</Bentoindiv>
+	<Bentoindiv title="About me" gridarea="bento3">
+
+	</Bentoindiv>
+	<Bentoindiv title="Contactame" gridarea="bento4">
+
+	</Bentoindiv>
 </div>
+
 <style>
     .home__bento {
 		display: grid;
