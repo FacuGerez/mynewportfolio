@@ -1,14 +1,11 @@
 ---
 interface Props {
-    src: string;
-    alt: string;
     href?: string;
 }
-const { src, alt, href } = Astro.props;
+const { href } = Astro.props;
 ---
 
 <a href={href ? href : "/#"}>
-    <img src={src} alt={alt} />
 	<slot/>
 </a>
 
@@ -24,9 +21,5 @@ const { src, alt, href } = Astro.props;
         align-items: center;
         margin: 10px;
         padding: 10px;
-    }
-    img {
-        max-width: 40px;
-        aspect-ratio: 1/1;
     }
 </style>

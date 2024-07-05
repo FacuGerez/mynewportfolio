@@ -1,14 +1,30 @@
 ---
-import Buttonnav from "./Buttonnav.astro";
+import Buttonnav from './Buttonnav.astro'
+import Hogar from '../icons/Hogar.astro'
+import BurbujaDeDialogo from '../icons/BurbujaDeDialogo.astro'
+import Maleta from '../icons/Maleta.astro'
+import Programacion from '../icons/Programacion.astro'
+import Usuario from '../icons/Usuario.astro'
+import Theme from '../icons/Theme.astro'
 ---
-
 <nav>
     <ul>
-        <Buttonnav src="hogar.png" alt="Home" href="/"/>
-        <Buttonnav src="hogar.png" alt="About" href="/#"/>
-        <Buttonnav src="hogar.png" alt="Proyects" href="/#"/>
-        <Buttonnav src="hogar.png" alt="Experience" href="/#"/>
-        <Buttonnav src="hogar.png" alt="Contact" href="/#"/>
+        <Buttonnav href="/">
+          <Hogar class="icon"/>
+        </Buttonnav>
+        <Buttonnav  href="/#">
+          <BurbujaDeDialogo class="icon"/>
+        </Buttonnav>
+        <Buttonnav  href="/#">
+          <Maleta class="icon"/>
+        </Buttonnav>
+        <Buttonnav  href="/#">
+          <Programacion class="icon"/>
+        </Buttonnav>
+        <Buttonnav  href="/#">
+          <Usuario class="icon"/>
+        </Buttonnav>
+        <Theme/>
     </ul>
 </nav>
 <style>
@@ -36,5 +52,9 @@ import Buttonnav from "./Buttonnav.astro";
         gap: 4px;
         backdrop-filter: blur(12px);
         padding: 5px;
+    }
+    .icon{
+        max-width: 40px;
+        aspect-ratio: 1/1;
     }
 </style>
