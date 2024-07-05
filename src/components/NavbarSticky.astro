@@ -1,0 +1,60 @@
+---
+import Buttonnav from './Buttonnav.astro'
+import Hogar from '../icons/Hogar.astro'
+import AboutMe from '../icons/Usuario.astro'
+import Proyects from '../icons/Programacion.astro'
+import Experience from '../icons/Maleta.astro'
+import Contact from '../icons/BurbujaDeDialogo.astro'
+import Theme from '../icons/Theme.astro'
+---
+<nav>
+    <ul>
+        <Buttonnav href="/">
+          <Hogar class="icon"/>
+        </Buttonnav>
+        <Buttonnav  href="/about">
+          <AboutMe class="icon"/>
+        </Buttonnav>
+        <Buttonnav  href="/proyects">
+          <Proyects class="icon"/>
+        </Buttonnav>
+        <Buttonnav  href="/experience">
+          <Experience class="icon"/>
+        </Buttonnav>
+        <Buttonnav  href="/contact">
+          <Contact class="icon"/>
+        </Buttonnav>
+        <Theme/>
+    </ul>
+</nav>
+<style>
+    nav{
+        position: sticky;
+        display: flex;
+        justify-content: center;
+        align-items: initial;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        background-color: rgba(0,0,0,0.1);
+        backdrop-filter: blur(99px);
+        z-index: 1000;
+	}
+    ul{
+        height: 80%;
+        max-width: min-content;
+        border: 1px solid white;
+        border-radius: 20rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        backdrop-filter: blur(12px);
+        padding: 5px;
+    }
+    .icon{
+        max-width: 40px;
+        aspect-ratio: 1/1;
+    }
+</style>

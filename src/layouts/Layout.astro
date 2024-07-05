@@ -1,25 +1,59 @@
 ---
+import NavbarSticky from '../components/NavbarSticky.astro';
 interface Props {
 	title: string;
+	description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<main>
+			<slot />
+		</main>
+		<NavbarSticky/>
 	</body>
 </html>
+<style is:global>
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	:root {
+		--background: rgb(252, 235, 253);
+		--color-text: black;
+		--font-aplicacion: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto ;
+		--navbar-height: 100px;
+	}
+	html.dark {
+		--background: rgb(12, 0, 20);
+		--color-text: white;
+	}
+</style>
 <style>
-
+	body{
+		position: relative;
+		font-family: var(--font-aplicacion), sans-serif;
+		background-color: var(--background);
+		background-image: url("violetdarknest.svg");
+		color: var(--color-text);
+		background-position-x: 60%;
+	}
+	main {
+		position: relative;
+		min-height: calc(100vh - var(--navbar-height));
+		padding: 10vh 20vw 5vh 20vw;
+	}
 </style>
