@@ -1,15 +1,18 @@
 import { useState, useEffect } from 'react';
-import'./theme.css';
 
 export const DarkModeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
-		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			return "dark";
-		}
-		return "light";
-	})
+	if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+	  return localStorage.getItem('theme');
+	}
+	if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+	  return 'dark';
+	}
+	  return 'light';
+  });
 
   useEffect(() => {
+	window.localStorage.setItem('theme', isDarkMode === "dark" ? "dark" : "light");
 	if (isDarkMode === "dark") {
 		document.querySelector("html").classList.add("dark");
 	} else {

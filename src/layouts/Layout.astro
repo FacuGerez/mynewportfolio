@@ -18,6 +18,7 @@ const { title, description } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
 	<body>
 		<main>
@@ -58,3 +59,24 @@ const { title, description } = Astro.props;
 		padding: 10vh 20vw 5vh 20vw;
 	}
 </style>
+<script>
+	function colorupdate() {
+		const theme = (() => {
+			if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+				return localStorage.getItem('theme');
+			} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				return 'dark';
+			}else{
+				return 'light';
+			}
+		})();
+		window.localStorage.setItem('theme', theme === "dark" ? "dark" : "light");
+		if (theme === "dark") {
+			document.documentElement.classList.add("dark");
+		} else {
+			document.documentElement.classList.remove("dark");
+		}
+	}
+	colorupdate();
+	document.addEventListener("astro:page-load", colorupdate);
+</script>

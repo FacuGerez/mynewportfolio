@@ -25,7 +25,8 @@ import {DarkModeToggle} from '../icons/Theme.jsx'
         <Buttonnav  href="/contact">
           <Contact class="icon"/>
         </Buttonnav>
-        <Theme/>
+        <DarkModeToggle client:only transitions.transition:persist/>
+        <!-- <Theme/> -->
         <!-- <DarkModeToggle client:only /> -->
     </ul>
 </nav>
