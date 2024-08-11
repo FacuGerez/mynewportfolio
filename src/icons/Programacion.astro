@@ -1,7 +1,11 @@
 ---
-import BaseIcon from './BaseIcon.astro'
+interface Props {
+    width: string
+    height?: string
+}
+const { width,height = width } = Astro.props
 ---
-<BaseIcon>
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
     <g class="moon" transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" stroke="none">
         <path d="M450 4804 c-216 -46 -401 -235 -439 -448 -8 -41 -11 -608 -11 -1800
         0 -1455 3 -1752 14 -1807 36 -166 155 -317 308 -388 46 -22 110 -44 142 -50
@@ -63,8 +67,7 @@ import BaseIcon from './BaseIcon.astro'
         -108 -8 -28 21 -41 65 -28 96 6 14 119 118 251 230 131 112 238 207 237 210
         -2 4 -110 98 -241 210 -131 112 -243 214 -248 227 -13 34 -1 70 28 93 37 29
         72 25 118 -12z"/>
-    </g>
-</BaseIcon>
+</svg>
 <style>
     .sun { fill: black; }
     .moon { fill: transparent; }

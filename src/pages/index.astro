@@ -1,15 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import GridBento from '../components/GridBento.astro';
+import Github from "../icons/GithubIcon.astro";
+import Linkedin from "../icons/LinkedinIcon.astro";
+import Email from "../icons/EmailIcon.astro";
+import Cv from "../icons/CvIcon.astro";
 ---
 
 <Layout title="Portfolio Facundo Gerez" description=''>
+	<!-- from 320 < with < 500 => this is a cellphone so its necesary to fix this css -->
 	<div class="home">
 		<div class="home__content">
 			<img class="home__logo" src="hogar.png" alt="logo de Facu" />
 			<h1 class="home__title"><b>Facundo Gerez</b></h1>
 			<p class="home__description">Astro is a new kind of static site builder that delivers
 				lightning-fast performance with a modern developer experience.</p>
+			<div>
+				<Github width="24" />
+				<Linkedin width="24" />
+				<Email width="24" />
+				<Cv width="24" />
+			</div>
 		</div>
 		<GridBento />
 	</div>
