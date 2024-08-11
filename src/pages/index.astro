@@ -28,13 +28,12 @@ import Cv from "../icons/CvIcon.astro";
 
 <style>
 	.home {
-		max-width: 100%;
-		display: grid;
-		grid-template-rows: auto 1fr;
+		display: flex;
+		flex-direction: column;
 		gap: 6rem;
 	}
 	.home__content {
-		gap: 1px;
+		max-height: min-content;
 	}
 	.home__logo {
 		width: 50px;
